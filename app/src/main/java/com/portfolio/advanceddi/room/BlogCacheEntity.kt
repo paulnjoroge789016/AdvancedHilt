@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
  * Created by paul on 9/2/2020 at 5:25 PM.
  */
 @Entity(tableName = "blogs")
-data class BlogCacheEntity(
+class BlogCacheEntity(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id")
     var id: Int,

@@ -1,9 +1,9 @@
 package com.portfolio.advanceddi.model
 
 data class Blog(
-    val body: String,
-    val category: String,
-    val image: String,
-    val id: Int,
-    val title: String
+    var body: String,
+    var category: String,
+    var image: String,
+    var id: Int,
+    var title: String
 )

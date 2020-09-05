@@ -2,11 +2,7 @@ package com.portfolio.advanceddi.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.portfolio.advanceddi.model.Blog
-import com.portfolio.advanceddi.retrofit.BlogNetworkEntity
-import com.portfolio.advanceddi.retrofit.BlogRetroft
-import com.portfolio.advanceddi.retrofit.NetworkMapper
-import com.portfolio.advanceddi.util.EntityMapper
+import com.portfolio.advanceddi.retrofit.BlogRetrofit
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,7 +37,9 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideBlogService(retrofit: Retrofit.Builder): BlogRetroft{
-        return retrofit.build().create(BlogRetroft::class.java)
+    fun provideBlogService(retrofit: Retrofit.Builder): BlogRetrofit{
+        return retrofit
+            .build()
+            .create(BlogRetrofit::class.java)
     }
 }

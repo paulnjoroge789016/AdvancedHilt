@@ -9,7 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 /**
  * Created by paul on 9/2/2020 at 5:40 PM.
  */
-@Database(entities = arrayOf(BlogCacheEntity::class), version = 1, exportSchema = false)
+@Database(entities = [BlogCacheEntity::class], version = 1, exportSchema = false)
 abstract class BlogDatabase : RoomDatabase(){
 
     abstract fun blogDao(): BlogDao

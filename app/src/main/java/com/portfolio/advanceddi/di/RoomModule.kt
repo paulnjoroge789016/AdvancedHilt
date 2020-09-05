@@ -14,15 +14,16 @@ import javax.inject.Singleton
 /**
  * Created by paul on 9/2/2020 at 6:04 PM.
  */
-
-@InstallIn(ApplicationComponent::class)
 @Module
+@InstallIn(ApplicationComponent::class)
+
 object RoomModule {
 
     @Singleton
     @Provides
     fun provideBlogDb(@ApplicationContext context: Context): BlogDatabase{
-        return Room.databaseBuilder(context, BlogDatabase::class.java,
+        return Room
+            .databaseBuilder(context, BlogDatabase::class.java,
             BlogDatabase.DATABASE_NAME
         )
             .fallbackToDestructiveMigration()
